@@ -8,6 +8,7 @@ require 'Controller/HomepageController.php';
 require 'Controller/InfoController.php';
 require 'Controller/RegisterController.php';
 require 'Controller/LoginController.php';
+require 'Controller/WelcomeController.php';
 
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
 //this file should never be more than 20 lines of code!

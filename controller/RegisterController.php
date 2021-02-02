@@ -8,7 +8,7 @@ class RegisterController
     {
 
         require_once "config.php";
- 
+        echo "start render of register";
 // Define variables and initialize with empty values
 $confirm_password_err = "";
 $username = $password = $confirm_password = "";
@@ -68,11 +68,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     // Check input errors before inserting in database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
+        echo "no error";
         
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password) VALUES (:username, :password)";
          
         if($stmt = $pdo->prepare($sql)){
+            echo "prepare works";
             // Bind variables to the prepared statement as parameters
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
             $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
@@ -83,12 +85,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             // Attempt to execute the prepared statement
             if($stmt->execute()){
+                echo "ready to go to login";
                 // Redirect to login page
-                return Redirect("http://localhost/MVC-pdo/index.php?page=login");
+                header("Location: http://localhost/MVC-pdo/index.php?page=login");
             } else{
                 echo "Something went wrong. Please try again later.";
             }
-
+           // var_dump($_SESSION['loggedin'])
             // Close statement
             unset($stmt);
         }
