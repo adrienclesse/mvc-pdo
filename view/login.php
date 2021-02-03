@@ -18,6 +18,7 @@
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-gold m-2 shadow" value="Login">
+                        <input type="reset" class="btn btn-outline-gold m-2" value="Reset">
                     </div>
                     <p>Don't have an account? <a href="index.php?page=register">Sign up now</a>.</p>
                 </form>

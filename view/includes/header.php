@@ -28,7 +28,7 @@
                         <a class="nav-link" href="index.php?page=login">Log in</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="index.php?page=register">Sign up</a>
+                        <a class="nav-link " href="index.php?page=register">Sign up</a>
                     </li>
                 </ul>
             </div>
