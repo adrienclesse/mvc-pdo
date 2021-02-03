@@ -8,11 +8,11 @@ class RegisterController
     {
 
         require_once "config.php";
-        echo "start render of register";
+        
 // Define variables and initialize with empty values
-$confirm_password_err = "";
-$username = $password = $confirm_password = "";
-$username_err = $password_err = $confirm_password_err = "";
+$confirm_password_err = $email =  "";
+$username = $password = $confirm_password = $confirm_password = "";
+$username_err = $password_err = $confirm_password_err = $email_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -65,23 +65,55 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $confirm_password_err = "Password did not match.";
         }
     }
+
+    //  email
+    if(empty(trim($_POST["email"]))){
+        $email_err = "Please enter email.";
+    } else{
+        // Prepare a select statement
+        $sql = "SELECT id FROM users WHERE email = :email";
+        
+        if($stmt = $pdo->prepare($sql)){
+            // Bind variables to the prepared statement as parameters
+            $stmt->bindParam(":email", $param_username, PDO::PARAM_STR);
+            
+            // Set parameters
+            $param_email = trim($_POST["email"]);
+            
+            // Attempt to execute the prepared statement
+            if($stmt->execute()){
+                if($stmt->rowCount() == 1){
+                    $email = "This email is already taken.";
+                } else{
+                    $email = trim($_POST["email"]);
+                }
+            } else{
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            unset($stmt);
+        }
+    }
     
     // Check input errors before inserting in database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         echo "no error";
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password) VALUES (:username, :password)";
+        $sql = "INSERT INTO users (username, password, email) VALUES (:username, :password, :email)";
          
         if($stmt = $pdo->prepare($sql)){
             echo "prepare works";
             // Bind variables to the prepared statement as parameters
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
             $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
+            $stmt->bindParam(":email", $param_password, PDO::PARAM_STR);
             
             // Set parameters
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            $email = $email;
             
             // Attempt to execute the prepared statement
             if($stmt->execute()){
@@ -91,7 +123,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             } else{
                 echo "Something went wrong. Please try again later.";
             }
-           // var_dump($_SESSION['loggedin'])
+           
             // Close statement
             unset($stmt);
         }
