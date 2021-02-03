@@ -13,6 +13,7 @@ class RegisterWelcome
     header("location: http://localhost/MVC-pdo/index.php?page=login");
     exit;
 }
+
 require 'view/welcome.php';
     }
 }
