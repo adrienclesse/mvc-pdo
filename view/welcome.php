@@ -7,8 +7,8 @@
     
     <br><br>
     <p>
-        <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-        <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
+        <a href="index.php?page=reset-password" class="btn btn-warning">Reset Your Password</a>
+        <a href="index.php?page=logout" class="btn btn-danger">Sign Out of Your Account</a>
     </p>
     </div>
 <?php require 'includes/footer.php'?>

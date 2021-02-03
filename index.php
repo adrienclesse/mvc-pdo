@@ -9,6 +9,10 @@ require 'Controller/InfoController.php';
 require 'Controller/RegisterController.php';
 require 'Controller/LoginController.php';
 require 'Controller/WelcomeController.php';
+require 'Controller/ResetPasswordController.php';
+require 'Controller/LogOutController.php';
+
+
 
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
 //this file should never be more than 20 lines of code!
@@ -36,6 +40,13 @@ if(isset($_GET['page']) && $_GET['page'] === 'welcome') {
     $controller = new RegisterWelcome();
 }
 
+if(isset($_GET['page']) && $_GET['page'] === 'reset-password') {
+    $controller = new RegisterResetPassword();
+}
+
+if(isset($_GET['page']) && $_GET['page'] === 'logout') {
+    $controller = new RegisterLogOut();
+}
 
 
 
