@@ -48,6 +48,7 @@ section {
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
   --bs-purple-main: #726a95;
+  --bs-light-purple: #c1a1d3;
   --bs-gold: #ffdc76;
   --bs-light-text: #fff3e6;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -2929,6 +2930,36 @@ textarea.form-control-lg {
   border-color: #726a95;
 }
 
+.btn-light-purple {
+  color: #000;
+  background-color: #c1a1d3;
+  border-color: #c1a1d3;
+}
+.btn-light-purple:hover {
+  color: #000;
+  background-color: #caafda;
+  border-color: #c7aad7;
+}
+.btn-check:focus + .btn-light-purple, .btn-light-purple:focus {
+  color: #000;
+  background-color: #caafda;
+  border-color: #c7aad7;
+  box-shadow: 0 0 0 0.25rem rgba(164, 137, 179, 0.5);
+}
+.btn-check:checked + .btn-light-purple, .btn-check:active + .btn-light-purple, .btn-light-purple:active, .btn-light-purple.active, .show > .btn-light-purple.dropdown-toggle {
+  color: #000;
+  background-color: #cdb4dc;
+  border-color: #c7aad7;
+}
+.btn-check:checked + .btn-light-purple:focus, .btn-check:active + .btn-light-purple:focus, .btn-light-purple:active:focus, .btn-light-purple.active:focus, .show > .btn-light-purple.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(164, 137, 179, 0.5);
+}
+.btn-light-purple:disabled, .btn-light-purple.disabled {
+  color: #000;
+  background-color: #c1a1d3;
+  border-color: #c1a1d3;
+}
+
 .btn-gold {
   color: #000;
   background-color: #ffdc76;
@@ -3011,6 +3042,31 @@ textarea.form-control-lg {
 }
 .btn-outline-purple-main:disabled, .btn-outline-purple-main.disabled {
   color: #726a95;
+  background-color: transparent;
+}
+
+.btn-outline-light-purple {
+  color: #c1a1d3;
+  border-color: #c1a1d3;
+}
+.btn-outline-light-purple:hover {
+  color: #000;
+  background-color: #c1a1d3;
+  border-color: #c1a1d3;
+}
+.btn-check:focus + .btn-outline-light-purple, .btn-outline-light-purple:focus {
+  box-shadow: 0 0 0 0.25rem rgba(193, 161, 211, 0.5);
+}
+.btn-check:checked + .btn-outline-light-purple, .btn-check:active + .btn-outline-light-purple, .btn-outline-light-purple:active, .btn-outline-light-purple.active, .btn-outline-light-purple.dropdown-toggle.show {
+  color: #000;
+  background-color: #c1a1d3;
+  border-color: #c1a1d3;
+}
+.btn-check:checked + .btn-outline-light-purple:focus, .btn-check:active + .btn-outline-light-purple:focus, .btn-outline-light-purple:active:focus, .btn-outline-light-purple.active:focus, .btn-outline-light-purple.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem rgba(193, 161, 211, 0.5);
+}
+.btn-outline-light-purple:disabled, .btn-outline-light-purple.disabled {
+  color: #c1a1d3;
   background-color: transparent;
 }
 
@@ -4298,6 +4354,15 @@ textarea.form-control-lg {
   color: #363347;
 }
 
+.alert-light-purple {
+  color: #74617f;
+  background-color: #f3ecf6;
+  border-color: #ece3f2;
+}
+.alert-light-purple .alert-link {
+  color: #5d4e66;
+}
+
 .alert-gold {
   color: #66582f;
   background-color: #fff8e4;
@@ -4585,6 +4650,20 @@ textarea.form-control-lg {
   color: #fff;
   background-color: #444059;
   border-color: #444059;
+}
+
+.list-group-item-light-purple {
+  color: #74617f;
+  background-color: #f3ecf6;
+}
+.list-group-item-light-purple.list-group-item-action:hover, .list-group-item-light-purple.list-group-item-action:focus {
+  color: #74617f;
+  background-color: #dbd4dd;
+}
+.list-group-item-light-purple.list-group-item-action.active {
+  color: #fff;
+  background-color: #74617f;
+  border-color: #74617f;
 }
 
 .list-group-item-gold {
@@ -5504,6 +5583,13 @@ textarea.form-control-lg {
   color: #5b5577;
 }
 
+.link-light-purple {
+  color: #c1a1d3;
+}
+.link-light-purple:hover, .link-light-purple:focus {
+  color: #cdb4dc;
+}
+
 .link-gold {
   color: #ffdc76;
 }
@@ -5867,6 +5953,10 @@ textarea.form-control-lg {
 
 .border-purple-main {
   border-color: #726a95 !important;
+}
+
+.border-light-purple {
+  border-color: #c1a1d3 !important;
 }
 
 .border-gold {
@@ -6635,6 +6725,10 @@ textarea.form-control-lg {
   color: #726a95 !important;
 }
 
+.text-light-purple {
+  color: #c1a1d3 !important;
+}
+
 .text-gold {
   color: #ffdc76 !important;
 }
@@ -6685,6 +6779,10 @@ textarea.form-control-lg {
 
 .bg-purple-main {
   background-color: #726a95 !important;
+}
+
+.bg-light-purple {
+  background-color: #c1a1d3 !important;
 }
 
 .bg-gold {

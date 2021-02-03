@@ -4,9 +4,12 @@ $body-bg: #fff3e6;
 
 $theme-colors:(
   "purple-main": #726a95,
+        "light-purple": #c1a1d3,
   "gold": #ffdc76,
   "light-text": #fff3e6,
 );
+
+$enable-shadows;
 
 html{
   box-sizing: border-box;
@@ -33,7 +36,10 @@ section{
   margin-bottom: -150px;
 }
 
+.login{
 
+
+}
 
 
 
