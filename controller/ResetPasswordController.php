@@ -10,7 +10,7 @@ session_start();
  
 // Check if the user is logged in, if not then redirect to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: http://localhost/BeCode/the-mountain/mvc-pdo/index.php?page=login");
+    header("location: http://localhost/mvc-pdo/index.php?page=login");
     exit;
 }
  
