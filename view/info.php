@@ -1,6 +1,35 @@
 <?php require 'includes/header.php'?>
     <section>
-        <h4>Info page</h4>
+        <h4>About us</h4>
+        <div class="d-flex justify-content-around">
+            <div class="card" style="width:300px">
+                <img class="card-img-top" src="" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text.</p>
+                </div>
+            </div>
+
+            <div class="card" style="width:300px">
+                <img class="card-img-top" src="" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text.</p>
+                </div>
+            </div>
+
+            <div class="card" style="width:300px">
+                <img class="card-img-top" src="" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text.</p>
+                </div>
+            </div>
+        
+        </div>
+
+        <h5>History</h5>
+        <p>Our story begins</p>
 
         <p><a href="index.php">Back to homepage</a></p>
 

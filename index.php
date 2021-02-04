@@ -11,6 +11,7 @@ require 'Controller/LoginController.php';
 require 'Controller/WelcomeController.php';
 require 'Controller/ResetPasswordController.php';
 require 'Controller/LogOutController.php';
+require 'Controller/MeetPeopleController.php';
 
 
 
@@ -48,6 +49,9 @@ if(isset($_GET['page']) && $_GET['page'] === 'logout') {
     $controller = new RegisterLogOut();
 }
 
+if(isset($_GET['page']) && $_GET['page'] === 'meetpeople') {
+    $controller = new MeetPeople();
+}
 
 
 $controller->render($_GET, $_POST);
