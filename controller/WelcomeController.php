@@ -10,7 +10,7 @@ class RegisterWelcome
  
     // Check if the user is logged in, if not then redirect him to login page
     if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: http://localhost/mvc-pdo/index.php?page=login");
+    header("location: index.php?page=login");
     exit;
 }
 
