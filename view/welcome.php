@@ -1,4 +1,5 @@
 <?php require 'includes/header.php'?>
+</div>
 <div class="page-header my-auto">
         <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome on your personal space.</h1>
         <p>Time to learn Here you can take a test to evaluate your level by clicking the button or meet people to learn your language with.</p>

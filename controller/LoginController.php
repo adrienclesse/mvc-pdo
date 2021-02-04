@@ -69,7 +69,7 @@ class LoginController
                                     $_SESSION["username"] = $username;                            
                                     
                                     // Redirect user to welcome page
-                                    header("Location: ../index.php?page=welcome");
+                                    header("Location: index.php?page=welcome");
                                 } else{
                                     // Display an error message if password is not valid
                                     $password_err = "The password you entered was not valid.";

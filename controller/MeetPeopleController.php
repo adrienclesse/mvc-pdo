@@ -13,16 +13,17 @@ class MeetPeople
         session_start();
         
         require "config.php";
+        //TODO: create variable $id for current user
+        //TODO: compare score current users with all userscores to find a match
         $conn = new PDO("mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME, DB_USERNAME, DB_PASSWORD);
-
-        $sql = "SELECT * FROM `users` WHERE id=37;";
-
+        $id = $_SESSION['id'];
+        $sql = "SELECT * FROM `users` WHERE id=$id;";
         $query = $conn->prepare($sql);
         $query->execute();
  
         while($fetch = $query->fetch()){
 
-        
+           //echo $fetch['score'];
        
         
         //load the view

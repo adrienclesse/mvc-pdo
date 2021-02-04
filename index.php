@@ -16,6 +16,7 @@ require 'Controller/WelcomeController.php';
 require 'Controller/ResetPasswordController.php';
 require 'Controller/LogOutController.php';
 require 'Controller/MeetPeopleController.php';
+require 'Controller/QuizController.php';
 
 
 
@@ -60,9 +61,11 @@ if(isset($_GET['page']) && $_GET['page'] === 'meetpeople') {
     $controller = new MeetPeople();
 }
 
+
 if(isset($_GET['page']) && $_GET['page'] === 'quiz') {
     $controller = new QuizController();
 }
+
 
 
 $controller->render($_GET, $_POST);
