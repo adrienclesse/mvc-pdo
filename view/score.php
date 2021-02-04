@@ -1,9 +1,9 @@
 <?php
-require_once "../controller/QuizController.php";
+require_once "../controller/Score.php";
 $score =0;
 array_pop($_GET);
 $rightAnswers = [];
-$quiz = new QuizController();
+$quiz = new Score();
 
 foreach (array_keys($_GET) as $key){
     $answer = $quiz->getAnswers($key);

@@ -11,7 +11,7 @@ class MeetPeople
         // then the view will actually display them.
         require "config.php";
         $conn = new PDO("mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME, DB_USERNAME, DB_PASSWORD);
-        $sql = "SELECT * FROM `users` WHERE id=37;"
+        $sql = "SELECT * FROM `users` WHERE id=37;";
         $query = $conn->prepare($sql);
         $query->execute();
  
