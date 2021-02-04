@@ -34,27 +34,45 @@
             </div>
         </nav>
     </header>
+</div>
+<div>
 
 </div>
-        <h3>Answer the questions and track your progress!</h3>
-            <form method="get" action="score.php">
-                <?php foreach($questions as $question) :?>
-                <?php $i += 1; ?>
-                <div id="question<?= $i ?>">
-                    <h5><?= $question['question'] ?></h5>
-                       <?php
+    <div class="container justify-content-center my-5 py-5">
+            <div class="row justify-content-center">
+                <div class="col-sm-6 bg-light-purple shadow-lg p-4 rounded text-light-text d-flex flex-column justify-content-center text-center">
+                <h3 class="p-3">Answer the questions and track your progress!</h3>
+                <form method="get" action="score.php">
+                    <?php
+                        foreach($questions as $question) :?>
+                        <?php $i += 1; ?>
+                    <div class="container d-flex justify-content-center">
+                        <div id="question<?= $i ?>">
+                            <h5 class="p-2"><?= $question['question'] ?></h5>
+                            <?php
                             $options = array($question['right_answer'], $question['wrong1'], $question['wrong2']);
                             shuffle($options);
                             foreach($options as $option):
-                        ?>
-                        <input type="radio" onchange="toggleQuestions(<?= $i ?>)" name="<?= $question['id']?>" value="<?= $option ?>">
-                        <label for="<?= $question['id']?>"><?= $option?></label>
+                                ?>
+                                <input type="radio" onchange="toggleQuestions(<?= $i ?>)" name="<?= $question['id']?>" id="<?= $option ?>" value="<?= $option ?>"  class="btn-check">
+                                <label for="<?= $option ?>" class="btn btn-gold shadow m-2"><?= $option?></label>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                    <div id="enter" class="container justify-content-center">
+                        <h5>Enter your anwers</h5>
+                        <button class="btn btn-gold shadow align-content-center" name="enter" type="submit">Enter</button>
+                    </div>
 
-                    <?php endforeach; ?>
-                </div>
-                    <?php endforeach; ?>
-                <button name="enter" type="submit">Enter</button>
-            </form>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
         <script src="includes/script/quizscript.js"></script>
 <footer>
     &copy; BeCode <?php echo date('Y')?>

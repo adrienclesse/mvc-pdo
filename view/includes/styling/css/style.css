@@ -23,7 +23,14 @@ body {
   display: block;
 }
 
-section {
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#homesection {
   margin-bottom: -150px;
 }
 
