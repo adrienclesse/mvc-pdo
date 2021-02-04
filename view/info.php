@@ -3,7 +3,7 @@
         <h4>About us</h4>
         <div class="d-flex justify-content-around">
             <div class="card" style="width:300px">
-                <img class="card-img-top" src="" alt="Card image">
+                <img class="card-img-top" src="view/includes/styling/img/highvalyrian.jpg" alt="highvalyrian">
                 <div class="card-body">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
@@ -11,7 +11,7 @@
             </div>
 
             <div class="card" style="width:300px">
-                <img class="card-img-top" src="" alt="Card image">
+                <img class="card-img-top" src="view/includes/styling/img/klingonian.jpg" alt="klingonian">
                 <div class="card-body">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
@@ -19,7 +19,7 @@
             </div>
 
             <div class="card" style="width:300px">
-                <img class="card-img-top" src="" alt="Card image">
+                <img class="card-img-top" src="view/includes/styling/img/elve.jpg" alt="Elve">
                 <div class="card-body">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
