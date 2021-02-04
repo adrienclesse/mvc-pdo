@@ -8,8 +8,8 @@ Anything complex should be calculated in the model -->
             <p class="my-4"> Want to learn this awesome fantasy language?<br>
                 Sign up, find a buddy and get on learning
             </p>
-            <button class="btn btn-gold mx-2 shadow">Sign up</button>
-            <button class="btn btn-outline-gold mx-2 shadow">Log in</button>
+            <button class="btn btn-gold mx-2 shadow" onclick="window.location.href='index.php?page=register';">Sign up</button>
+            <button class="btn btn-outline-gold mx-2 shadow" onclick="window.location.href='index.php?page=login';">Log in</button>
 
         </div>
 

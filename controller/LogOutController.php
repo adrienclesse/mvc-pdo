@@ -15,7 +15,7 @@ class RegisterLogOut
         session_destroy();
          
         // Redirect to login page
-        header("location: http://localhost/BeCode/the-mountain/mvc-pdo/index.php?page=login");
+        header("location: http://localhost/mvc-pdo/index.php?page=login");
         exit;
         
     }
