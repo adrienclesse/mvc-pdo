@@ -11,7 +11,7 @@ class LoginController
  
         // Check if the user is already logged in, if yes then redirect him to welcome page
         if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-            header("Location: http://localhost/MVC-pdo/index.php?page=welcome");
+            header("Location: http://localhost/mvc-pdo/index.php?page=welcome");
             exit;
         }
          
@@ -69,7 +69,7 @@ class LoginController
                                     $_SESSION["username"] = $username;                            
                                     
                                     // Redirect user to welcome page
-                                    header("location: http://localhost/MVC-pdo/index.php?page=welcome");
+                                    header("Location: http://localhost/BeCode/the-mountain/mvc-pdo/index.php?page=welcome");
                                 } else{
                                     // Display an error message if password is not valid
                                     $password_err = "The password you entered was not valid.";
