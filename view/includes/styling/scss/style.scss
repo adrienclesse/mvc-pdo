@@ -9,7 +9,6 @@ $theme-colors:(
   "light-text": #fff3e6,
 );
 
-$enable-shadows;
 
 html{
   box-sizing: border-box;
@@ -32,13 +31,12 @@ body {
   display: block;
 }
 
-section{
-  margin-bottom: -150px;
-}
 
-.login{
-
-
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 

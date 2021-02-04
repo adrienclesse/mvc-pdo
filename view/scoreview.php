@@ -36,8 +36,22 @@
     </header>
 </div>
 <div>
-    <h4>Your score this time is <?= $score ?></h4>
+
 </div>
+<div class="container justify-content-center my-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-sm-6 bg-light-purple shadow-lg p-4 rounded text-light-text d-flex flex-column justify-content-center text-center">
+            <h4>Your score this time is <span class="text-gold"><?= $score ?></span> </h4>
+            <div class="container d-flex justify-content-center">
+                <button class="btn btn-gold m-3 shadow">Go back</button>
+                <button class="btn btn-outline-gold m-3 shadow">Try again</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
 <footer>
     &copy; BeCode <?php echo date('Y')?>
 </footer>

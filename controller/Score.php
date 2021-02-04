@@ -4,6 +4,7 @@
 class Score
 {
 
+
     public function getAnswers($id)
     {
 

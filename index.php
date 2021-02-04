@@ -20,6 +20,8 @@ require 'Controller/MeetPeopleController.php';
 
 
 
+
+
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
 //this file should never be more than 20 lines of code!
 
@@ -56,6 +58,10 @@ if(isset($_GET['page']) && $_GET['page'] === 'logout') {
 
 if(isset($_GET['page']) && $_GET['page'] === 'meetpeople') {
     $controller = new MeetPeople();
+}
+
+if(isset($_GET['page']) && $_GET['page'] === 'quiz') {
+    $controller = new QuizController();
 }
 
 
