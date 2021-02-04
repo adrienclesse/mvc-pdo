@@ -6,6 +6,7 @@ declare(strict_types = 1);
 class QuizController
 
 {
+    
 
     public function getQuestions(){
         $mysqli = new mysqli('localhost', 'root', '', 'fantasy-language-exchange');
