@@ -120,7 +120,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if($stmt->execute()){
                 echo "ready to go to login";
                 // Redirect to login page
-                header("Location: http://localhost/MVC-pdo/index.php?page=login");
+                header("Location: index.php?page=login");
             } else{
                 echo "Something went wrong. Please try again later.";
             }
