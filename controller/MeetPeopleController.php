@@ -42,6 +42,8 @@ class MeetPeople
 
         foreach($allScores as $string)
         {
+            // Strpos only shows first encounter
+            // TODO: show all occurences instead of only one
             if(strpos($searchstring, $string) !== false) 
             {
                 $sql4 = "SELECT email, username FROM `users` WHERE score=$searchstring;"; // and exclude current user
