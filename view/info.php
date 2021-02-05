@@ -8,24 +8,24 @@
                 <div class="card bg-light-text shadow-sm text-light-purple" style="width:300px">
                     <img class="card-img-top" src="view/includes/styling/img/highvalyrian.jpg" alt="highvalyrian">
                     <div class="card-body">
-                        <h4 class="card-title">John Doe</h4>
-                        <p class="card-text">Some example text.</p>
+                        <h4 class="card-title">Daenerys Targaryen</h4>
+                        <p class="card-text">Fluent in High Valyrian</p>
                     </div>
                 </div>
 
                 <div class="card bg-light-text shadow-sm text-light-purple" style="width:300px">
-                    <img class="card-img-top" src="view/includes/styling/img/klingonian.jpg" alt="klingonian">
+                    <img class="card-img-top" src="view/includes/styling/img/worf.jpg" alt="klingonian">
                     <div class="card-body">
-                        <h4 class="card-title">John Doe</h4>
-                        <p class="card-text">Some example text.</p>
+                        <h4 class="card-title">Worf</h4>
+                        <p class="card-text">Fluent in Klingon</p>
                     </div>
                 </div>
 
                 <div class="card bg-light-text shadow-sm text-light-purple" style="width:300px">
                     <img class="card-img-top" src="view/includes/styling/img/elve.jpg" alt="Elve">
                     <div class="card-body">
-                        <h4 class="card-title">John Doe</h4>
-                        <p class="card-text">Some example text.</p>
+                        <h4 class="card-title">Althidon Ravamaris</h4>
+                        <p class="card-text">Fluent in Elvish</p>
                     </div>
                 </div>
             </div>
