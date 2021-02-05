@@ -1,5 +1,5 @@
         <?php require 'includes/header.php'?>
-        
+        </div>
        
         <p>Hey there, want to meet your fellow learners</p>
        We found and user that might learn with you : <?php echo $fetch['username']; ?>.
