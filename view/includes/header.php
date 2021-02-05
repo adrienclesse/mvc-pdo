@@ -16,6 +16,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
+            <!-- TODO: Why doesn't this work?
+            <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> -->
                 <a class="navbar-brand mx-3 px-3" href="index.php?page=home">Fantalang</a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-3 px-3">
                     <li class="nav-item active">
