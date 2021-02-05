@@ -20,25 +20,62 @@ class MeetPeople
         $query = $conn->prepare($sql);
         $query->execute();
 
-        $sqlAllScores = "SELECT * FROM `users`;"; // and exclude current user
-        $query2 = $conn->prepare($sqlAllScores);
-        $query2->execute();
-
         // Getting the userscore
         $fetch = $query->fetch();
         $userScore = $fetch['score'];
-        // var_dump($userScore);
-        // echo "<br>";
+        var_dump($userScore);
+        echo "<br>";
 
-        // Getting the people with 
-        $fetch2 = $query2->fetch();
-        $sameLevel = $fetch2['score'];
-        //var_dump($sameLevel);
+        $sql2 = "SELECT * FROM `users`;"; // and exclude current user
+        $query2 = $conn->prepare($sql2);
+        $query2->execute();
 
+        // Getting all scores from database
+        $fetch2 = $query2->fetchAll(PDO::FETCH_COLUMN, 4);
+        $allScores = $fetch2;
+        var_dump(array_filter($allScores));
 
-        if($userScore = $sameLevel){
-            //show email with link;
+        echo "<br>";
+
+        // Search for equal scores
+        $searchstring = $userScore;
+
+        foreach($allScores as $string)
+        {
+            if(strpos($searchstring, $string) !== false) 
+            {
+                $sql4 = "SELECT email, username FROM `users` WHERE score=$searchstring;"; // and exclude current user
+                $query4 = $conn->prepare($sql4);
+                $query4->execute();
+                $fetch4 = $query4->fetch(PDO::FETCH_ASSOC);
+
+                var_dump($fetch4);
+                break;
+            }
         }
+
+        echo "<br>";
+
+        foreach($allScores as $score){
+            echo("<br>" . $score);
+        }
+        echo "<br>";
+
+        $sql3 = "SELECT * FROM `users`;"; // and exclude current user
+        $query3 = $conn->prepare($sql3);
+        $query3->execute();
+
+        $fetch3 = $query3->fetch(PDO::FETCH_ASSOC);
+        var_dump($fetch3);
+
+        $matchingScore = $allScores;
+
+        if($userScore == $matchingScore){
+            //show email with link;
+            echo "sameLevel@lang.com";   
+        }   else{
+                echo "no match found";
+            }
         
         //load the view
         require 'view/meetpeople.php';
